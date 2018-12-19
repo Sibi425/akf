@@ -12,7 +12,6 @@ app.use(bodyParser.json())
 
 require('./routes')(app)
 
-
 app.listen(config.port, () => {
     console.groupCollapsed("Port ", config.port)
 })
