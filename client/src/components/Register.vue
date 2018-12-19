@@ -1,21 +1,26 @@
 <template>
-  <h1> Register </h1>
+  <div>
+    <h1> Register </h1>
+    <input type="email" name="email" placeholder="email">
+    <button @click="register()">Email senden</button>
+  </div>
 </template>
 
 <script>
-import AuthenticationService from '@services/AuthenticationService'
+import AuthenticationService from '@/services/AuthenticationService'
 export default {
     name: 'Register',
   data(){
       return{
-
+        email:"",
+        password:""
       };
   },
   methods:  {
-      register(){
-          AuthenticationService.register({
-              email: "acvby",
-              password: "eweqe"
+    register(){
+        AuthenticationService.register({
+              email: this.email,
+              password: this.password
           })
       }
   }
