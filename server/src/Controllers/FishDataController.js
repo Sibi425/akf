@@ -1,10 +1,11 @@
 const config = require('../config/config')
 const path = require('path')
+const fishDataFile = path.resolve(__dirname, '../' + config.fishes)
 
 module.exports = {
     getFishData(req, res){
 
-        res.sendFile( path.resolve(__dirname, '../' + config.fishes));
-        console.log("gigigi")
+        res.sendFile(fishDataFile);
+
     }
 }
