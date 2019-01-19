@@ -1,5 +1,9 @@
 <template>
-  <h1> Register </h1>
+  <div>
+    <h1> Register </h1>
+    <input type="email" name="email" v-model="email" placeholder="email">
+    <button @click="register()">Email senden</button>
+  </div>
 </template>
 
 <script>
@@ -8,15 +12,17 @@ export default {
     name: 'Register',
   data(){
       return{
-
+        email:"",
+        password:""
       };
   },
   methods:  {
-      register(){
-          AuthenticationService.register({
-              email: "acvby",
-              password: "eweqe"
+    async register(){
+        const response = await AuthenticationService.register({
+              email: this.email,
+              password: this.password
           })
+        console.log(response)
       }
   }
 }

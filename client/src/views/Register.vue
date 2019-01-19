@@ -1,18 +1,16 @@
-<template>
-  <div class="register">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
-</template>
+// <template>
+//   <div class="register">
+//   </div>
+// </template>
 
-<script>
-// @ is an alias to /src
-import Register from '@/components/Register.vue'
+// <script>
+// // @ is an alias to /src
+// import Register from '@/components/Register.vue'
 
-export default {
-  name: 'Register',
-  components: {
-    Register
-  }
-}
-</script>
+// export default {
+//   name: 'Register',
+//   components: {
+//     Register
+//   }
+// }
+// </script>
